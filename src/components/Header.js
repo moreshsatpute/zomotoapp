@@ -2,7 +2,7 @@ import React from 'react'
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import Logo from "../assets/logo/logo.png"
 import { Link, } from 'react-router-dom'
-import ContactUs from '../pages/ContactUs';
+// import ContactUs from '../pages/ContactUs';
 
 
 
@@ -11,40 +11,39 @@ const Header = () => {
     <header>
 
       <Navbar  >
-        <Container>
+      <Container>
           <Navbar.Brand href="#home">
-            <Link to="/" className='Logo'> 
-            <img src={Logo} alt="Logo" className='img-fluid' /></Link>
+            <Link to="/" className="logo">
+              <img src={Logo} alt="Logo" className="img-fluid" />
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/">
-                HOME
+                Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/About">
-                ABOUT
+              <Nav.Link as={Link} to="/about">
+                About
               </Nav.Link>
-              <Nav.Link as={Link} to="/Menu">
-                OUR MENU
+              <Nav.Link as={Link} to="/menu">
+                Our Menu
               </Nav.Link>
-              <Nav.Link as={Link} to="/Shop">
-                SHOP
+              <Nav.Link as={Link} to="/shop">
+                Shop
               </Nav.Link>
-              <Nav.Link as={Link} to="/Blog">
-                BLOG
+              <Nav.Link as={Link} to="/blog">
+                Blog
               </Nav.Link>
-              <Nav.Link as={Link} to="/ContactUs">
-                CONTACT
+              <Nav.Link as={Link} to="/contact">
+                Contact
               </Nav.Link>
-              <Nav.Link as={Link} to="/Contact">
-                <div className='cart'>
-
+              <Nav.Link as={Link} to="/">
+                <div className="cart">
                   <i class="bi bi-bag fs-5"></i>
-                  <em className='roundpoint'>2</em>
+                  <em className="roundpoint">2</em>
                 </div>
               </Nav.Link>
-
             </Nav>
           </Navbar.Collapse>
         </Container>
