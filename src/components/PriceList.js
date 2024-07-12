@@ -1,13 +1,18 @@
-// PriceList.js
+
 import React from 'react';
 import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-// import './PriceList.css'; // Import CSS for styling
+import { useSelector, useDispatch } from 'react-redux';
+import { removeTodo } from "../feature/todos/todoSlice"
+
 
 const PriceList = ({ items }) => {
+
+  const todos=useSelector(state=>state.todos)
+  const dispatch = useDispatch()
+
   const calculateTotal = () => {
     return items.reduce((acc, item) => acc + item.quantity * item.amount, 0);
   };
-
   return (
     <div className="price-list">
       {items.map((item, index) => (
@@ -22,12 +27,19 @@ const PriceList = ({ items }) => {
           </Card.Body>
         </Card>
       ))}
-      <Card className="mt-3">
+      {todos.map((todo)=>(
+
+      <Card className="mt-3" key={todo.id}>
+        <button
+        onClick={()=>dispatch(removeTodo(todo.id))}>delete</button>
         <Card.Body>
           <Card.Title>Grand Total</Card.Title>
           <Card.Text>${calculateTotal()}</Card.Text>
         </Card.Body>
       </Card>
+      ))
+
+      }
     </div>
   );
 };

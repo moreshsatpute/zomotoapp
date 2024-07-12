@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import {useDispatch} from 'react-redux';
+import { addTodo } from "../feature/todos/todoSlice";
+
+
+
 
 function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
+  const [input,setInput] = useState('')
+  
+  const dispatch = useDispatch()
+
+  const adTodoHandler =(e)=>{
+    e.preventDefault()
+    dispatch(addTodo(input))
+    setInput('')
+  }
+  
   return (
     <Col sm={6} lg={4} xl={3} className="mb-4">
       <Card className="overflow-hidden">
@@ -25,7 +40,7 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
               <h5 className="mb-0">${price}</h5>
             </div>
             <div className="add_to_card">
-              <Link to="/">
+              <Link to="/" onClick={adTodoHandler}>
                 <i class="bi bi-bag me-2"></i>
                 Add To Cart
               </Link>
