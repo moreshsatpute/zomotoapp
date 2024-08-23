@@ -185,11 +185,11 @@
 .menu_section .ads_box h4 {
   font-size: 2.25rem;
   font-weight: 300;
-  color: var(--brown);
+  color: var(--dark-black);
 }
 .menu_section .ads_box h5 {
   font-size: 2.375rem;
-  color: var(--brown);
+  color: var(--white);
 }
 .menu_section .ads_box a {
   margin-top: 15px;

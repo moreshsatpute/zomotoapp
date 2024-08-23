@@ -6,7 +6,7 @@ const Section1 = () => {
   return (
     <section className="hero_section">
       <video className="video-background" autoPlay muted loop>
-        <source src="https://cdn.pixabay.com/video/2015/12/11/1648-148614456_medium.mp4" type="video/mp4" />
+        <source src="https://cdn.pixabay.com/video/2016/02/29/2336-157269911_large.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <Container>
