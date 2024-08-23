@@ -1,11 +1,20 @@
 /* Home Hero 1.0 */
 .hero_section {
   position: relative;
-  background: url("../assets/hero/hero-1.jpg") no-repeat center center;
+  /* background: url("../assets/hero/hero-1.jpg") no-repeat center center; */
   background-size: cover;
   background-attachment: fixed;
   padding-top: 170px;
   padding-bottom: 90px;
+}
+.hero_section .video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire section */
+  z-index: -1; /* Send video behind content */
 }
 .hero_section .price_badge {
   background: url("../assets/hero/price-badge-yellow.png") no-repeat center
