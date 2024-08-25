@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import Logo from "../assets/logo/logo.png";
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';  // Import HashLink for smooth scrolling
 
 import PriceList from '../components/PriceList'; // Import the PriceList component
 
@@ -46,22 +47,22 @@ const Header = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={HashLink} smooth to="#home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={HashLink} smooth to="#about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/menu">
+              <Nav.Link as={HashLink} smooth to="#menu">
                 Our Menu
               </Nav.Link>
-              <Nav.Link as={Link} to="/shop">
+              <Nav.Link as={HashLink} smooth to="#shop">
                 Shop
               </Nav.Link>
-              <Nav.Link as={Link} to="/blog">
+              <Nav.Link as={HashLink} smooth to="#blog">
                 Blog
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link as={HashLink} smooth to="#contact">
                 Contact
               </Nav.Link>
               

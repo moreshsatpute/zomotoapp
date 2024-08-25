@@ -11,30 +11,42 @@ import Section7 from "./Section7";
 
 const Home = () => {
   return (
-    <>
-      <Layout>
-        {/* Home Section Hero Banner */}
+    <Layout>
+      {/* Home Section Hero Banner */}
+      <section id="home">
         <Section1 />
+      </section>
 
-        {/* Home Section About */}
+      {/* Home Section About */}
+      <section id="about">
         <Section2 />
+      </section>
 
-        {/* Home Section Menu */}
+      {/* Home Section Menu */}
+      <section id="menu">
         <Section3 />
+      </section>
 
-        {/* Home Section Promotion */}
+      {/* Home Section Promotion */}
+      <section id="promotion">
         <Section4 />
+      </section>
 
-        {/* Home Section Shop */}
+      {/* Home Section Shop */}
+      <section id="shop">
         <Section5 />
+      </section>
 
-        {/* Home Section Blog */}
+      {/* Home Section Blog */}
+      <section id="blog">
         <Section6 />
+      </section>
 
-        {/* Home Section Contact */}
+      {/* Home Section Contact */}
+      <section id="contact">
         <Section7 />
-      </Layout>
-    </>
+      </section>
+    </Layout>
   );
 };
 

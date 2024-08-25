@@ -40,7 +40,7 @@ const mockData = [
   {
     id: "0004",
     image: Image4,
-    title: "Vegan Burger",
+    title: "Vegan Biryani",
     paragraph: "House patty, cheddar cheese, bacon, onion, mustard",
     rating: 3.5,
     price: 99.25,
@@ -48,7 +48,7 @@ const mockData = [
   {
     id: "0005",
     image: Image5,
-    title: "Double Burger",
+    title: "Double Biryani",
     paragraph: "2 patties, cheddar cheese, mustard, pickles, tomatoes",
     rating: 3.0,
     price: 59.25,
@@ -56,7 +56,7 @@ const mockData = [
   {
     id: "0006",
     image: Image6,
-    title: "Turkey Burger",
+    title: "Turkey Biryani",
     paragraph: "Turkey, cheddar cheese, onion, lettuce, tomatoes, pickles",
     rating: 3,
     price: 79.18,
@@ -72,7 +72,7 @@ const mockData = [
   {
     id: "0008",
     image: Image8,
-    title: "Classic Burger",
+    title: "Classic Biryani",
     paragraph: "cheddar cheese, ketchup, mustard, pickles, onion",
     rating: 2.0,
     price: 89.12,
@@ -104,7 +104,7 @@ function Section3() {
       <Container>
         <Row>
           <Col lg={{ span: 8, offset: 2 }} className="text-center mb-5">
-            <h2>OUR CRAZY BURGERS</h2>
+            <h2>OUR CRAZY BiryaniS</h2>
             <p className="para">
               Aliquam a augue suscipit, luctus neque purus ipsum neque undo
               dolor primis libero tempus, blandit a cursus varius magna
