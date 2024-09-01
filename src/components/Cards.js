@@ -1,8 +1,21 @@
 import React from "react";
 import { Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../redux/cartSlice'; // Import the action
 
 function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
+  const dispatch = useDispatch();
+
+  const handleAddToCart = () => {
+    const product = {
+      image,
+      title,
+      price,
+      description: paragraph
+    };
+    dispatch(addToCart(product)); // Dispatch the action to add to cart
+  };
+
   return (
     <Col sm={6} lg={4} xl={3} className="mb-4">
       <Card className="overflow-hidden">
@@ -13,7 +26,7 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
           <div className="d-flex align-items-center justify-content-between">
             <div className="item_rating">{renderRatingIcons(rating)}</div>
             <div className="wishlist">
-              <i class="bi bi-heart"></i>
+              <i className="bi bi-heart"></i>
             </div>
           </div>
 
@@ -24,11 +37,11 @@ function Cards({ image, rating, title, paragraph, price, renderRatingIcons }) {
             <div className="menu_price">
               <h5 className="mb-0">${price}</h5>
             </div>
-            <div className="add_to_card">
-              <Link to="/">
-                <i class="bi bi-bag me-2"></i>
+            <div className="add_to_cart">
+              <button onClick={handleAddToCart} className="btn btn-primary">
+                <i className="bi bi-bag me-2"></i>
                 Add To Cart
-              </Link>
+              </button>
             </div>
           </div>
         </Card.Body>

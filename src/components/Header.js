@@ -8,6 +8,7 @@ import PriceList from '../components/PriceList'; // Import the PriceList compone
 
 const Header = () => {
   const [showPriceList, setShowPriceList] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(0); // Initialize with a count
 
   const items = [
     { product: 'Product 1', quantity: 1, amount: 10 },
@@ -33,6 +34,8 @@ const Header = () => {
 
   const togglePriceList = () => {
     setShowPriceList(prevShowPriceList => !prevShowPriceList);
+    // Increment cart item count every time the cart is toggled
+    setCartItemCount(prevCount => prevCount + 1);
   };
 
   return (
@@ -67,9 +70,9 @@ const Header = () => {
               </Nav.Link>
               
               <Nav.Link as={Link} to="#" onClick={togglePriceList}>
-              <div className="cart">
+                <div className="cart">
                   <i className="bi bi-bag fs-5"></i>
-                  <em className="roundpoint">2</em>
+                  <em className="roundpoint">{cartItemCount}</em> {/* Display cart item count */}
                 </div>
               </Nav.Link>
             </Nav>
